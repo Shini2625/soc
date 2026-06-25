@@ -25,8 +25,9 @@ function App() {
       <br/>
       <div>
         <label>Second Name:</label>
-        <input {...register('name2', {required:true, minLength:{value:5, message:"enter more than 5 chars"}, maxLength:{value:27, message:"enter less than 27 chars"}})}/>
-        {errors.name2 && <p>{errors.name2.message}</p>}
+        <input classname={errors.name2 ? "iner" : ""}
+        {...register('name2', {required:true, minLength:{value:5, message:"enter more than 5 chars"}, maxLength:{value:27, message:"enter less than 27 chars"}})}/>
+        {errors.name2 && <p classname="errmsg" >{errors.name2.message}</p>}
       </div>
      
      <button type="submit">

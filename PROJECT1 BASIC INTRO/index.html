@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <section class="hero">
+        <img src="2048background.jpg" alt="2048 background" class="hero-img">
+        <div class="hero-overlay">
+            <h2>Merge Blocks!</h2>  
+            <button id="b1">Sign in/Log in</button>
+            <p>Combine blocks with the same number to create bigger numbers. Try to reach 2048!</p>
+            <hr color="#080001" width="100%" thickness="100px" size="5px">
+            <!--navigation bar-->
+            <h3>Navigation</h3>
+            <table>
+                <tr>
+                    <th><a href="index.html"><b>Home</b></a></th>
+                    <th><a href="https://www.2048game.com"><b>Play</b></a></th>
+                </tr>
+            </table>
+            <hr color="#080001" width="100%" thickness="100px" size="3px">
+            <h3>Game Highlights</h3>
+            <ul>
+                <li>Highscore: 0</li>
+                <li>Hightile: 0</li>
+            </ul>
+            <h3>How to Get Started</h3>
+            <p>Ready to play? Follow these simple steps to get started:</p>
+            <ol>
+                <li>Click on the "Play" link to start a new game.</li>
+                <li>Use the arrow keys to move the tiles.</li>
+                <li>When two tiles with the same number touch, they merge into one!</li>
+            </ol>
+            <p> A sample move is shown below:</p>
+        </div>
+        <div class="interactive">
+            <img id="p1" class="gameplay-img" alt="Gameplay1" src="2048_files/2048-1.png">
+            <p id="ele">swipe down</p>
+            <button id="q">next</button>
+        <p id="l" style="text-align: center;"><b>Can you reach 2048? Play now and find out!</b></p>
+
+        </div>
+        <footer>
+            <p>&copy; 2026 2048 Game. All rights reserved.</p>
+            <a href="https://www.2048game.com" target="_blank">official game website</a>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

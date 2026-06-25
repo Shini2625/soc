@@ -13,7 +13,21 @@ function App() {
 
   return (
     <>
-     <p>hello</p>
+     <p>hello this is to understand the react hook form</p>
+     <form onSubmit={handleSubmit((data)=>console.log(data))}>
+      <div>
+        <label>First Name:</label>
+        <input {...register('1name')}/>
+      </div>
+      <br/>
+      <div>
+        <label>Second Name:</label>
+        <input {...register('2name')}/>
+      </div>
+     </form>
+     <button onClick={handleSubmit}>
+       submit
+     </button>
     </>
   )
 }

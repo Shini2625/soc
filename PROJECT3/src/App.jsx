@@ -8,9 +8,10 @@ function App() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
-  function submitFn(data){
+   async function submitFn(data){
+    await new Promise((resolve)=>setTimeout(resolve, 5000))
     alert("you have submitted the form");
     console.log(data);
   }
@@ -25,12 +26,13 @@ function App() {
       <br/>
       <div>
         <label>Second Name:</label>
-        <input classname={errors.name2 ? "iner" : ""}
+        <input className={errors.name2 ? "iner" : ""}
         {...register('name2', {required:true, minLength:{value:5, message:"enter more than 5 chars"}, maxLength:{value:27, message:"enter less than 27 chars"}})}/>
-        {errors.name2 && <p classname="errmsg" >{errors.name2.message}</p>}
+        {errors.name2 && <p className="errmsg" >{errors.name2.message}</p>}
       </div>
      
-     <button type="submit">
+     <button type="submit" disabled={isSubmitting}
+     value={isSubmitting ? "submitting" : "submit"} >
        submit
      </button>
      </form>

@@ -1,9 +1,7 @@
-.p{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: black;
-}
+
 .errmsg {
   font-family: 'Times New Roman', Times, serif;
   color: crimson;
-  font-size: large;
+  font-size: larger;
+  border-color: rgb(32, 23, 9);
 }

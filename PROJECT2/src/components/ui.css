@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ded9d9 40%, #95a258 60%);
+    
+}
+h1{
+    text-align: center;
+}
+#input{
+    display: block;
+    margin: 0 auto;
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    border-radius: 2rem;
+    border: 1px solid #94cd0f;
+    height: 5rem; 
+    width: 7rem;
+    text-align: center;
+    font-weight: bold;
+    color: #243302;
+}
+#roll, #reset, #close-rules, #show-rules, #confirm{
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #5d8305;
+    color: #101701;
+    cursor: pointer;
+}
+.ui-root{
+    background: #bcce8e;
+    height: 100%;
+    padding: 2rem;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 12px;
+   
+}
+#die{
+    display: block;
+    margin: 1rem auto;
+    width: 12rem;
+    height: 12rem;
+    position: relative;
+    border-radius: 2rem;
+}

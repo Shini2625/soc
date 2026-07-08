@@ -2,6 +2,7 @@ import './App.css'
 import Header from './assets/components/header.jsx'
 import HERO1 from './assets/components/hero1.jsx'
 import Hero2 from './assets/components/hero2.jsx'
+import Hero3 from './assets/components/hero3.jsx'
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Header />
       < HERO1 />
       < Hero2/>
+      <div className="py-8"/>
+      < Hero3/>
       <h1 className="p-4 text-xl">hello</h1>
     </>
   )

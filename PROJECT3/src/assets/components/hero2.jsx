@@ -109,10 +109,10 @@ const Hero2 = () => {
       
     </div>
      <div className="flex justify-items-end gap-9 px-12">
-        <button className="rounded-md bg-amber-300 bg-opacity-60 px-3 py-2 text-slate-800 transition hover:bg-amber-950 hover:text-white">1</button>
-        <button className="rounded-md bg-amber-300 bg-opacity-60 px-3 py-2 text-slate-800 transition hover:bg-amber-950 hover:text-white">2</button>
-        <button className="rounded-md bg-amber-300 bg-opacity-60 px-3 py-2 text-slate-800 transition hover:bg-amber-950 hover:text-white">3</button>
-        <button className="rounded-md bg-amber-300 bg-opacity-60 px-3 py-2 text-slate-800 transition hover:bg-amber-950 hover:text-white">Next</button>
+        <button className="rounded-md bg-amber-600 bg-opacity-10 px-3 py-2 text-slate-800 transition hover:bg-amber-800 hover:text-white">1</button>
+        <button className="rounded-md bg-amber-600 bg-opacity-10 px-3 py-2 text-slate-800 transition hover:bg-amber-800 hover:text-white">2</button>
+        <button className="rounded-md bg-amber-600 bg-opacity-10 px-3 py-2 text-slate-800 transition hover:bg-amber-800 hover:text-white">3</button>
+        <button className="rounded-md bg-amber-600 bg-opacity-10 px-3 py-2 text-slate-800 transition hover:bg-amber-800 hover:text-white">Next</button>
     </div>
     
     </>

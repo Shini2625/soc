@@ -6,26 +6,26 @@ import cartImage from '../images/cart.png'
 
 const H = () => {
   return (
-    <header className="flex items-center justify-between bg-white">
-      <div className="flex items-center gap-3">
-        <img src={logo} alt="Logo" className="h-8 w-8" />
+    <header class="flex items-center justify-between bg-white">
+  
+        <img class="h-20 w-35"src={logo} alt="Logo" />
        
-      </div>
+  
 
       <nav>
-        <ul className="flex items-center gap-6 text-sm font-medium">
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
+        <ul class="flex items-center gap-6 text-sm font-medium">
+          <li class="hover:text-amber-900">Home</li>
+          <li class="hover:text-amber-900">Shop</li>
+          <li class="hover:text-amber-900">About</li>
+          <li class="hover:text-amber-900">Contact</li>
         </ul>
       </nav>
 
-      <div className="flex gap-3">
-        <img src={userImage} alt="User" className="h-6 w-6" />
-        <img src={searchImage} alt="Search" className="h-6 w-6" />
-        <img src={favImage} alt="Favorite" className="h-6 w-6" />
-        <img src={cartImage} alt="Cart" className="h-6 w-6" />
+      <div class="flex items-center gap-3 group">
+        <img  class="h-6 w-6 "  src={userImage}/>
+        <img  class="h-6 w-6" src={searchImage}/>
+        <img class="mt-[-4px] h-6 w-6" src={favImage}/>
+        <img  class="h-6 w-6" src={cartImage}/>
       </div>
     </header>
   )

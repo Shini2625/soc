@@ -14,10 +14,10 @@ const H = () => {
 
       <nav>
         <ul class="flex items-center gap-6 text-sm font-medium">
-          <li class="hover:text-amber-900">Home</li>
-          <li class="hover:text-amber-900">Shop</li>
-          <li class="hover:text-amber-900">About</li>
-          <li class="hover:text-amber-900">Contact</li>
+          <li class="hover:text-amber-900 cursor-pointer">Home</li>
+          <li class="hover:text-amber-900 cursor-pointer">Shop</li>
+          <li class="hover:text-amber-900 cursor-pointer">About</li>
+          <li class="hover:text-amber-900 cursor-pointer">Contact</li>
         </ul>
       </nav>
 

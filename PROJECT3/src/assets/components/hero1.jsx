@@ -13,7 +13,7 @@ const HERO1 = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="absolute inset-0 bg-white/60" />
+      <div className="absolute inset-0 bg-white/20" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center gap-3">
         <img className="h-10 w-25" src={logo1} alt="Logo" />
         <h1 className="text-4xl font-medium text-black tracking-wide">Blog</h1>

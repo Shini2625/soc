@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import './assets/components/header.jsx'
-
 import './App.css'
+import Header from './assets/components/header.jsx'
 
 function App() {
-  
   return (
     <>
-      <header/> 
-      <hi>hi</hi>
+      <Header />
+      <h1 className="p-4 text-xl">hello</h1>
     </>
   )
 }

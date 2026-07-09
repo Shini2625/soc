@@ -8,18 +8,15 @@
   },
   "repository": {
     "type": "git"
-   
   },
   "keywords": [
     "backend101"
   ],
   "author": "shini",
   "license": "ISC",
-  "bugs": {
-    
-  },
-
+  "bugs": {},
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }
 }

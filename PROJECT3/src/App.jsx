@@ -16,7 +16,7 @@ function App() {
       <div className="py-4"/>
       <div className="border-b-2 border-opacity-20 border-black"/>
      <Footer />
-      <p>helloooooooo</p>
+      
     </>
   )
 }

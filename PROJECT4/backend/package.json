@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "getting started with backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node script.js"
   },

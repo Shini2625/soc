@@ -1,0 +1,25 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "getting started with backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git"
+   
+  },
+  "keywords": [
+    "backend101"
+  ],
+  "author": "shini",
+  "license": "ISC",
+  "bugs": {
+    
+  },
+
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

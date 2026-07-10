@@ -21,8 +21,13 @@ app.get('/api/frnd' , (req, res) => {
     res.send('<h2>your friends list</h2>')
 });
 app.get('/api/quote/:id' , (req , res)=>{
-    
-    res.json([quote]);
+     const id = parseInt(req.params.id);
+  const quote = quotes.find(q => q.id === id);
+  if (quote) {
+    res.json([quote]);  // Return as array since frontend expects array
+  } else {
+    res.json([]);
+  }
 });
 
 app.listen(port, ()=> {

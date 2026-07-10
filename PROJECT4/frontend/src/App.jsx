@@ -25,11 +25,11 @@ function App() {
       <input value={no} onChange={handleinput} placeholder='enter the id of quote u want to see'/>
 
       {
-        quote.map((quote, index)=>{
+        quote.map((quote)=>(
           <div key={quote.id}>
              <p>{quote.text}</p>
           </div>
-        })
+        ))
       }
     </>
   )

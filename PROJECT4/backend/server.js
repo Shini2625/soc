@@ -10,17 +10,17 @@ const quotes = [
     {id:1 , text:"you r gay"}
 ];
 
-app.get('/', (req , res) => {
+app.get('/api/', (req , res) => {
     res.send('Hello! This is your first attempt')
 });
-app.get('/login' , (req , res)=>{
+app.get('/api/login' , (req , res)=>{
     res.send('<h1>trying to login</h1>')
 });
 
-app.get('/frnd' , (req, res) => {
+app.get('/api/frnd' , (req, res) => {
     res.send('<h2>your friends list</h2>')
 });
-app.get('/quote' , (req , res)=>{
+app.get('/api/quote' , (req , res)=>{
     res.json(quotes);
 });
 

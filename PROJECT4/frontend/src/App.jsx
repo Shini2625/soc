@@ -8,12 +8,12 @@ import { useEffect } from 'react'
 function App() {
   const [quote, setQuote] = useState([])
   const [no , setNo]=useState()
-  const handleinput(e){
-    setNo(e);
+  const handleinput=(e)=>{
+    setNo(e.target.value);
   };
 
   useEffect(()=>{
-    axios.get(`http://localhost:8000/quote/${no}`)
+    axios.get(`/api/quote/${no}`)
       .then(res => setQuote(res.data))
       .catch(err => console.log(err));
   }, [no]);

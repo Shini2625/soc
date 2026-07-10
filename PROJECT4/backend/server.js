@@ -20,8 +20,9 @@ app.get('/api/login' , (req , res)=>{
 app.get('/api/frnd' , (req, res) => {
     res.send('<h2>your friends list</h2>')
 });
-app.get('/api/quote' , (req , res)=>{
-    res.json(quotes);
+app.get('/api/quote/:id' , (req , res)=>{
+    
+    res.json([quote]);
 });
 
 app.listen(port, ()=> {

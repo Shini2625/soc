@@ -1,4 +1,5 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
+dotenv.config()
 import express from 'express';
 
 const app = express();
@@ -14,7 +15,9 @@ app.get('/login' , (req , res)=>{
 app.get('/frnd' , (req, res) => {
     res.send('<h2>your friends list</h2>')
 });
-
+app.get('/quote' , (req , res)=>{
+    
+})
 app.listen(port, ()=> {
     console.log(`Example app listening on port ${port}`)
 });

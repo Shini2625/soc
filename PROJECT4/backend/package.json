@@ -15,6 +15,7 @@
   ],
   "author": "shini",
   "license": "ISC",
+  
   "bugs": {},
   "dependencies": {
     "dotenv": "^17.4.2",

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config()
+dotenv.config() //for keeping secret data
 import express from 'express';
 
 const app = express();
@@ -8,6 +8,11 @@ const quotes = [
     {id:3 , text:"you r ur own boss"},
     {id:2 , text:"you r a baddie" },
     {id:1 , text:"you r gay"}
+];
+const frnd = [
+    {id:1 , text:"vanika"},
+    {id:2 , text:"such"},
+    {id:3 , text:"tanu"}
 ];
 
 app.get('/api/', (req , res) => {
@@ -20,6 +25,12 @@ app.get('/api/login' , (req , res)=>{
 app.get('/api/frnd' , (req, res) => {
     res.send('<h2>your friends list</h2>')
 });
+
+app.post('/api/frnd/add' , (req ,res)=> {
+    res.append('')
+});
+
+app.get()
 app.get('/api/quote/:id' , (req , res)=>{
      const id = parseInt(req.params.id);
   const quote = quotes.find(q => q.id === id);

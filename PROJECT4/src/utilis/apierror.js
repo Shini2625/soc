@@ -1,9 +1,8 @@
-class apierror extends error {
+class apierror extends Error {
     constructor(
         statuscode,
-        message= "smtg went wrong",
-        error=[],
-        statck=''
+        message= "",
+        
     ){
         super(message)
         this.statuscode=statuscode

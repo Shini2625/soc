@@ -16,4 +16,3 @@ connectDB()
     
 })
 
-app()

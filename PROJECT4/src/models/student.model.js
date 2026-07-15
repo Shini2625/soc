@@ -22,8 +22,7 @@ const studentschema = mongoose.Schema({
     Email: {
         type: String,
         required: true,
-        unique: true,
-        lowercase: true
+        unique: true, 
     }
 },{timestamps: true})
 

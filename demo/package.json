@@ -10,5 +10,9 @@
     "\"demo\""
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "D": "^1.0.0",
+    "nodemon": "^3.1.14"
+  }
 }

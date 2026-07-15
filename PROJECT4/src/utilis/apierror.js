@@ -1,7 +1,7 @@
 class apierror extends Error {
     constructor(
         statuscode,
-        message= "",
+        message= "Resources not found",
         
     ){
         super(message)
@@ -9,7 +9,6 @@ class apierror extends Error {
         this.data=null
         this.message= message
         this.success= false;
-        this.error= error
     }
 }
 export {apierror}

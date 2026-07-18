@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import {Timestamp} from "mongodb"
+import bcrypt from "bcrypt"
 
 const studentschema = mongoose.Schema({
     Name:{
@@ -30,5 +31,13 @@ const studentschema = mongoose.Schema({
         unique: true, 
     }
 },{timestamps: true})
+
+studentschema.pre('save', async function(next) {
+  if (!this.isModified('Password')) {
+    return next();
+  }
+  this.Password = await bcrypt.hash(this.Password, 10);
+  next();
+});
 
 export const studentdata = new mongoose.model("Studentdata", studentschema)

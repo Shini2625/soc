@@ -13,6 +13,8 @@ const studentCtrl = asyncHandler(
     async (req, res) => {
     try {
         const student = await studentdata.create(req.body);
+        const studentObj = student.studentObject();
+        delete studentObj.Password;
         res.status(201).json(new apires(201, student, 'student created successfully'));
       } catch (error) {
           console.error(error);

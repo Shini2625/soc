@@ -34,12 +34,11 @@ const studentschema = mongoose.Schema({
 },{timestamps: true})
 
 //password hashing
-studentschema.pre('save', async function(next) {
+studentschema.pre('save', async function() {
   if (!this.isModified('Password')) {
-    return next();
+    return;
   }
   this.Password = await bcrypt.hash(this.Password, 10);
-  next();
 });
 
 //

@@ -8,4 +8,4 @@ class apires{
         this.success= statuscode< 400
     }
 }
-export {apires}
+export default {apires}

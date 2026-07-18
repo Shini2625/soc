@@ -1,9 +1,12 @@
+import { studentdata } from "../models/student.model.js";
 import {asyncHandler} from "../utilis/asynchandler.js";
+import apierror from "../utilis/apierror.js";
+import apires from "../utilis/apiresponse.js";
 
 const healthCtrl = asyncHandler(
-    async ((req, res) => {
+    async (req, res) => {
       res.status(200).json(new apires(200, {}, 'backend running successfully'));
-    })
+    }
 );
 
 const studentCtrl = asyncHandler(
@@ -25,5 +28,5 @@ const studentCtrl = asyncHandler(
     }
 )
 
-export {healthCtrl, studentCtrl}
+export default {healthCtrl, studentCtrl}
 

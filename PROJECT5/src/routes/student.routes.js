@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { healthCtrl, studentCtrl } from "../controllers/p41.controllers";
+import { healthCtrl, studentCtrl } from "../controllers/p41.controllers.js";
 
 const router = Router()
 

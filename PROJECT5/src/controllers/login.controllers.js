@@ -32,7 +32,7 @@ const loginCtrl = asyncHandler(async (req, res) => {
   /* 6. res.cookie('refreshToken', refreshToken, { httpOnly: true, secure: true, sameSite: 'strict' }) */
     res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: true,
+        secure: process.env.NODE_ENV ==='production',
         sameSite: 'strict',
       });
 
@@ -66,8 +66,10 @@ const refreshAccessTokenCtrl = asyncHandler(async (req, res) => {
           return res.status(401).json(new apierror(401, "invalid refresh token — user no longer exists"));
        }
   /* 6. generate a new access token: student.generateAccessToken() */
+     const accessToken = student.generateAccessToken();
 
   /* 7. send it back: res.status(200).json(new apires(200, { accessToken }, "access token refreshed")) */
+    res.status(200).json(new apires(200, { accessToken }, "access token refreshed"));
 });
 
 export {loginCtrl, refreshAccessTokenCtrl}

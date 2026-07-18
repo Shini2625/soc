@@ -45,4 +45,29 @@ const loginCtrl = asyncHandler(async (req, res) => {
   );
 });
 
-export {loginCtrl}
+//refresh access token
+const refreshAccessTokenCtrl = asyncHandler(async (req, res) => {
+  /* 1. read the refresh token from req.cookies.refreshToken */
+        const refreshtoken = req.cookies.refreshToken
+  /* 2. if it's missing entirely — 401, reject */
+        if(!refreshtoken) return res.status(403).json(new apierror(403, "invalid refreshtoken"));
+  /* 3. jwt.verify(incomingToken, process.env.REFRESH_TOKEN_SECRET), 
+        wrapped in try/catch since verify() throws on invalid/expired */
+        let decoded;
+           try {
+            decoded = jwt.verify(refreshtoken, process.env.REFRESH_TOKEN_SECRET);
+         } catch (error) {
+         return res.status(403).json(new apierror(403, "invalid or expired refresh token"));
+       }
+  /* 4. look up the student using the decoded id (studentdata.findById) */
+        const student = await studentdata.findById(decoded.id);
+  /* 5. if no student found — 401, reject */
+      if (!student) {
+          return res.status(401).json(new apierror(401, "invalid refresh token — user no longer exists"));
+       }
+  /* 6. generate a new access token: student.generateAccessToken() */
+
+  /* 7. send it back: res.status(200).json(new apires(200, { accessToken }, "access token refreshed")) */
+});
+
+export {loginCtrl, refreshAccessTokenCtrl}

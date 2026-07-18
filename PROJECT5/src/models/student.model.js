@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
-import {Timestamp} from "mongodb"
-import bcrypt from "bcrypt"
+import {Timestamp} from "mongodb";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const studentschema = mongoose.Schema({
     Name:{
@@ -32,6 +33,7 @@ const studentschema = mongoose.Schema({
     }
 },{timestamps: true})
 
+//password hashing
 studentschema.pre('save', async function(next) {
   if (!this.isModified('Password')) {
     return next();
@@ -39,5 +41,23 @@ studentschema.pre('save', async function(next) {
   this.Password = await bcrypt.hash(this.Password, 10);
   next();
 });
+
+//
+
+studentschema.methods.generateAccessToken = function() {
+  return jwt.sign(
+    { id: this._id, email: this.Email },
+    process.env.ACCESS_TOKEN_SECRET,
+    { expiresIn: process.env.ACCESS_TOKEN_EXPIRY }
+  );
+};
+
+studentschema.methods.generateRefreshToken = function() {
+  return jwt.sign(
+    { id: this._id },
+    process.env.REFRESH_TOKEN_SECRET,
+    { expiresIn: process.env.REFRESH_TOKEN_EXPIRY }
+  );
+};
 
 export const studentdata = new mongoose.model("Studentdata", studentschema)

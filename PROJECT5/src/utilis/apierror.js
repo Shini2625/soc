@@ -7,8 +7,11 @@ class apierror extends Error {
         super(message)
         this.statuscode=statuscode
         this.data=null
-        this.message= message
         this.success= false;
+         Object.defineProperty(this, 'message', {
+            value: message,
+            enumerable: true,
+        })
     }
 }
 export {apierror}

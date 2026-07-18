@@ -1,6 +1,7 @@
-import { asyncHandler} from "../utilis/asynchandler";
-import { studentdata } from "../models/student.model";
-import {apierror} from "../utilis/apierror";
+import { asyncHandler} from "../utilis/asynchandler.js";
+import { studentdata } from "../models/student.model.js";
+import {apierror} from "../utilis/apierror.js";
+import {apires} from "../utilis/apiresponse.js";
 import bcrypt from 'bcrypt';
 
 
@@ -39,6 +40,9 @@ const loginCtrl = asyncHandler(async (req, res) => {
       const studentObj = student.toObject();
      delete studentObj.Password;
   /* 8. res.status(200).json(new apires(200, { student: studentObj, accessToken }, 'login successful')) */
+      res.status(200).json(
+            new apires(200, { student: studentObj, accessToken }, 'logged in successfully')
+  );
 });
 
 export {loginCtrl}

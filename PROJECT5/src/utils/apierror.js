@@ -1,16 +1,14 @@
-class apierror extends error {
+class apierror extends Error {
     constructor(
         statuscode,
-        message= "smtg went wrong",
-        error=[],
-        statck=''
+        message= "Resources not found",
+        
     ){
         super(message)
         this.statuscode=statuscode
         this.data=null
         this.message= message
         this.success= false;
-        this.error= error
     }
 }
 export {apierror}

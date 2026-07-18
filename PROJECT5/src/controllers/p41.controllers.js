@@ -9,7 +9,7 @@ const healthCtrl = asyncHandler(
     }
 );
 
-const studentCtrl = asyncHandler(
+const registerCtrl = asyncHandler(
     async (req, res) => {
     try {
         const student = await studentdata.create(req.body);
@@ -30,5 +30,5 @@ const studentCtrl = asyncHandler(
     }
 )
 
-export {healthCtrl, studentCtrl}
+export {healthCtrl, registerCtrl}
 

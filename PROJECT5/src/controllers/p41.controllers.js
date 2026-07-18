@@ -28,5 +28,5 @@ const studentCtrl = asyncHandler(
     }
 )
 
-export default {healthCtrl, studentCtrl}
+export {healthCtrl, studentCtrl}
 

@@ -6,4 +6,4 @@ const registerStudent = asyncHandler( async (req, res) => {
     })
 })
 
-export default {registerStudent} 
+export  {registerStudent} 

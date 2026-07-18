@@ -1,7 +1,7 @@
 import { studentdata } from "../models/student.model.js";
 import {asyncHandler} from "../utilis/asynchandler.js";
-import apierror from "../utilis/apierror.js";
-import apires from "../utilis/apiresponse.js";
+import {apierror} from "../utilis/apierror.js";
+import {apires} from "../utilis/apiresponse.js";
 
 const healthCtrl = asyncHandler(
     async (req, res) => {

@@ -11,4 +11,4 @@ class apierror extends Error {
         this.success= false;
     }
 }
-export default {apierror}
+export default  {apierror}

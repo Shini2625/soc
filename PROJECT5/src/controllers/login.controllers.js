@@ -3,6 +3,7 @@ import { studentdata } from "../models/student.model.js";
 import {apierror} from "../utilis/apierror.js";
 import {apires} from "../utilis/apiresponse.js";
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 
 const loginCtrl = asyncHandler(async (req, res) => {

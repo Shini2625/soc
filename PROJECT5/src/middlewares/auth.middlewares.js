@@ -1,6 +1,6 @@
+import jwt from 'jsonwebtoken'
 
-
-export const verifyJWT = asyncHandler(async (req, res, next) => {
+const verifyJWT = asyncHandler(async (req, res, next) => {
   /* 1. get the token — from req.header('Authorization'), strip the "Bearer " prefix */
        const authHeader = req.header('Authorization');
        const token = authHeader?.replace('Bearer ', '');
@@ -27,3 +27,5 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
   /* 5. call next() to let the request through */
     next();
 });
+
+export default verifyJWT

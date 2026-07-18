@@ -1,5 +1,5 @@
 import { Router } from "express";
-import jwt from 'jsonwebtoken';
+import verifyJWT from "../middlewares/auth.middlewares.js";
 import { healthCtrl, studentCtrl } from "../controllers/p41.controllers.js";
 import { loginCtrl } from "../controllers/login.controllers.js";
 

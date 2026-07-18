@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config() 
 import express from 'express';
+import cookieParser from 'cookie-parser'
 
 import { apierror } from './utilis/apierror.js';
 import { apires } from './utilis/apiresponse.js';
@@ -8,7 +9,18 @@ import { studentdata } from './models/student.model.js';
 
 const app = express();
 
-app.use(express.json());
+app.use(cors({
+  origin: process.env.CORSORIGIN ,
+  credentials: true
+}))
+
+app.use(express.json({limit: "16kb"}));
+app.use(express.urlencoded({extended: true, limit: "16kb"}))
+app.use(cookieParser())
+
+import studentRouter from './routes/student.routes.js'
+
+app.use("/students", studentRouter)
 
 app.get('/health', (req, res) => {
   res.status(200).json(new apires(200, {}, 'backend running successfully'));

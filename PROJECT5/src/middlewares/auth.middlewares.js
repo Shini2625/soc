@@ -1,4 +1,9 @@
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken' 
+
+import {asyncHandler} from '../utilis/asynchandler.js';
+import { apierror } from '../utilis/apierror.js';
+import { apires } from '../utilis/apiresponse.js';
+import { studentdata } from '../models/student.model.js';
 
 const verifyJWT = asyncHandler(async (req, res, next) => {
   /* 1. get the token — from req.header('Authorization'), strip the "Bearer " prefix */

@@ -6,9 +6,9 @@ import { loginCtrl } from "../controllers/login.controllers.js";
 const router = Router()
 
 router.route("/health").get(healthCtrl)
-router.route("/student").post(studentCtrl)
-router.route("/login").post(loginCtrl)
-router.route("/student").post(verifyJWT, studentCtrl);
+router.route("/student").post(verifyJWT, studentCtrl)
+router.route("/login").post( loginCtrl)
+
 
 
 export default router

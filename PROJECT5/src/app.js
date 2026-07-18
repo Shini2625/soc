@@ -23,6 +23,7 @@ import studentRouter from './routes/student.routes.js'
 
 app.use("/students", studentRouter)
 
+/*
 app.get('/health', (req, res) => {
   res.status(200).json(new apires(200, {}, 'backend running successfully'));
 });
@@ -43,5 +44,6 @@ app.post('/student', async (req, res) => {
       }
     }
 });
+*/
 
 export default app;

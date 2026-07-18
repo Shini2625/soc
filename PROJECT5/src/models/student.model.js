@@ -6,10 +6,15 @@ const studentschema = mongoose.Schema({
         type: String,
         required: true,
     },
+    Password : {
+        type: String,
+        required: true,
+        select: false
+    },
     Roll_number:{
         type: String,
         required: true,
-        unique: [true, "this roll number is already in use/doesnt exist"]
+        unique: true
     },
     Branch: {
         type: String,

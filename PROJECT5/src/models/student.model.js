@@ -7,11 +7,13 @@ const studentschema = mongoose.Schema({
     Name:{
         type: String,
         required: true,
+        unique: true
     },
     Password : {
         type: String,
         required: true,
-        select: false
+        select: false,
+        unique: true
     },
     Roll_number:{
         type: String,

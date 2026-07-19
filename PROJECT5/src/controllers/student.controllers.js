@@ -1,9 +1,7 @@
 import { asyncHandler } from "../utilis/asynchandler.js";
 
-const studentCtrlon = asyncHandler( async (req, res) => {
-    res.status(200).json({
-        message: "OK"
-    })
+const updateStudentCtrl = asyncHandler( async (req, res) => {
+    
 })
 
-export  {studentCtrlon} 
+export  {updateStudentCtrl} 

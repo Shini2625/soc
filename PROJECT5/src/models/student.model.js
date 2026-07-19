@@ -11,8 +11,7 @@ const studentschema = mongoose.Schema({
     Password : {
         type: String,
         required: true,
-        select: false,
-        unique: true
+        select: false
     },
     Roll_number:{
         type: String,

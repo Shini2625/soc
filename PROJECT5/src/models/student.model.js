@@ -6,8 +6,7 @@ import jwt from "jsonwebtoken";
 const studentschema = mongoose.Schema({
     Name:{
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     Password : {
         type: String,

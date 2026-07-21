@@ -13,7 +13,7 @@ router.route("/login").post( loginCtrl)
 router.route("/refresh-token").post(refreshAccessTokenCtrl)
 router.route("/logout").post(verifyJWT, logoutCtrl)
 router.route("/student/:id").patch(verifyJWT, updateStudentCtrl)
-router.route("/count").get(branchCtrl)
+router.route("/count").get(verifyJWT, branchCtrl)
 
 
 

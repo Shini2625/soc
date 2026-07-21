@@ -32,10 +32,11 @@ const registerCtrl = asyncHandler(
 
 const branchCtrl = asyncHandler(
   async (req, res) => {
-    await studentdata.aggregate([
+    const result = await studentdata.aggregate([
       {$group: {_id: "$Branch", count:{$sum:1}}},
       { $project: { _id: 0, branch: "$_id", count: 1 } }
-    ])
+    ]);
+    res.status(200).json(new apires(200, result, "branch-wise count fetched successfully"))
   }
 )
 

@@ -30,5 +30,13 @@ const registerCtrl = asyncHandler(
     }
 )
 
-export {healthCtrl, registerCtrl}
+const branchCtrl = asyncHandler(
+  async (req, res) => {
+    await studentdata.aggregate([
+      {$group: {_id: "$Branch", count:{$sum:1}}}
+    ])
+  }
+)
+
+export {healthCtrl, registerCtrl, branchCtrl}
 

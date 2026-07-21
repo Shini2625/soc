@@ -33,7 +33,8 @@ const registerCtrl = asyncHandler(
 const branchCtrl = asyncHandler(
   async (req, res) => {
     await studentdata.aggregate([
-      {$group: {_id: "$Branch", count:{$sum:1}}}
+      {$group: {_id: "$Branch", count:{$sum:1}}},
+      { $project: { _id: 0, branch: "$_id", count: 1 } }
     ])
   }
 )

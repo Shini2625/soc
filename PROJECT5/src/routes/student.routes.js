@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { healthCtrl, registerCtrl } from "../controllers/p41.controllers.js";
+import { branchCtrl, healthCtrl, registerCtrl } from "../controllers/p41.controllers.js";
 import verifyJWT from "../middlewares/auth.middlewares.js"
 import { loginCtrl, refreshAccessTokenCtrl } from "../controllers/login.controllers.js";
 import { logoutCtrl } from "../controllers/logout.controller.js";
@@ -13,6 +13,7 @@ router.route("/login").post( loginCtrl)
 router.route("/refresh-token").post(refreshAccessTokenCtrl)
 router.route("/logout").post(verifyJWT, logoutCtrl)
 router.route("/student/:id").patch(verifyJWT, updateStudentCtrl)
+router.route("/count").get(branchCtrl)
 
 
 

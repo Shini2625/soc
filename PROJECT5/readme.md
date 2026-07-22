@@ -1,6 +1,7 @@
 For setting up
 Run this command in your terminal: npm i -D nodemon 
                                    npm i dotenv mongoose express bcrypt jsonwebtoken cookie-parser cors
+                                   for the packages or simply run npm install
 To run the code: npm run dev
 you can add your port, db link, ACCESS_TOKEN_SECRET, ACCESS_TOKEN_EXPIRY, REFRESH_TOKEN_SECRET, REFRESH_TOKEN_EXPIRY in .env file
 There are 7 routes 

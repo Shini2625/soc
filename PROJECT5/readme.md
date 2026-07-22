@@ -12,3 +12,5 @@ There are 7 routes
   5. /students/student/:id: for updating student details
   6. /students/count: for counting no of students per branch
   7. /students/logout: for logging out
+
+Also in changing the student data you can only change name, semester, and branch 
